@@ -16,3 +16,11 @@ u.password_confirmation = "123456"   # 最少要六码
 
 u.is_admin = true
 u.save
+
+
+Product.create!(title: "把时间当做朋友",
+                 description: "时间不能管理,管理自己吧",
+                 price: 2800,
+                 quantity: 10,
+                 image: open("http://oqnn4wlus.bkt.clouddn.com/download-2.jpg")
+                 )

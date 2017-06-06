@@ -13,7 +13,7 @@ layout "admin"
  end
 
  def edit
-   @product = Product.find(params[:id])
+   @product = Product.find_by_friendly_id!(params[:id])
  end
 
   def create
@@ -26,7 +26,7 @@ layout "admin"
   end
 
   def update
-    @product = Product.find(params[:id])
+  @product = Product.find_by_friendly_id!(params[:id])
   if @product.update(product_params)
     redirect_to admin_products_path
   else
